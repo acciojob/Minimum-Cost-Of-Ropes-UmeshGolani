@@ -3,17 +3,16 @@ function minimumCost() {
     
     var res = 0;
     var cost = 0;
-    document.getElementById("result").innerHTML = res;
     var inputArray = document.getElementById("inputArr").value;
     inputArray = inputArray.split(',').map(Number);
-    inputArray = inputArray.sort().reverse();
-    var res = inputArray.pop();
-    for (let i = 1; i < inputArray.length; i++) {
-        
-        res += inputArray.pop();
+    for (let i = 0; i < inputArray.length - 1; i += 0) {
+        if (inputArray.length == 0) break;
+        inputArray = inputArray.sort((a,b) => b-a);
+        res = inputArray.pop() + inputArray.pop();
         cost += res;
-        inputArray[inputArray.length - i] = res;
-        console.log(res);
+        inputArray[inputArray.length] = res;
+       
+        
     }
 
     
