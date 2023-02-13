@@ -1,12 +1,19 @@
-function minimumCost(ropeLengths) {
-    ropeLengths.sort((a, b) => a - b);
-    let totalCost = 0;
-    let minCost = 0;
-    while (ropeLengths.length > 0) {
-        totalCost += ropeLengths.pop() ;
-        minCost = Math.max(minCost, totalCost);
+
+function minimumCost() {
+    var a = document.getElementById("inputArr");
+    var res = 0;
+    document.getElementById("result").innerHTML = res;
+    var inputArray = document.getElementById("inputArr").value;
+    inputArray = inputArray.split(',').map(Number);
+    inputArray = inputArray.sort().reverse();
+    var a = inputArray.pop();
+    for (let i = 1; i < inputArray.length; i++) {
+        res += a + inputArray[inputArray.length-i];
+        a = res;
+        console.log(res);
     }
-    return totalCost;
+
+    
+    document.getElementById("result").innerHTML = res;
 }
-var a = [4, 2, 7, 6, 9];
-console.log(minimumCost(a));
+
