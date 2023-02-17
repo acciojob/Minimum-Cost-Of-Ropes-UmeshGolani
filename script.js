@@ -10,12 +10,6 @@ function minimumCost() {
         inputArray = inputArray.sort((a,b) => b-a);
         res = inputArray.pop() + inputArray.pop();
         cost += res;
-        inputArray[inputArray.length] = res;
-       
-        
-    }
-
-    
-    document.getElementById("result").innerHTML = cost;
-}
+        inputArray[inputArray.length] = res; }
+    document.getElementById("result").innerHTML = cost;  }
 
