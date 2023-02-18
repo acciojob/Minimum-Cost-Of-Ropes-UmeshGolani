@@ -1,8 +1,4 @@
-
-function minimumCost() {
-    
-    var res = 0;
-    var cost = 0;
+function minimumCost() {    var res = 0;    var cost = 0;
     var inputArray = document.getElementById("inputArr").value;
     inputArray = inputArray.split(',').map(Number);
     for (let i = 0; i < inputArray.length - 1; i += 0) {
